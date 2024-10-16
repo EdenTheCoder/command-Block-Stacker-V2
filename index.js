@@ -73,7 +73,7 @@ function GenCommand() {
 	for (let itaration = 0; itaration < Everyblock.length; itaration++) {
 		let i = Everyblock[itaration];
 		let cart =
-			'{id:"minecraft:command_block_minecart",Command:"setblock ~' +
+			"{id:'minecraft:command_block_minecart',Command:'setblock ~" +
 			i.LocX +
 			" ~" +
 			i.LocY +
