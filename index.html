@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div style="display: inline-flex; text-align: center">
+			<a href="https://edenthecoder.github.io/index.html" class="topBar">
+				home
+			</a>
+			<a href="https://edenthecoder.github.io/contact.html" class="topBar">
+				contact
+			</a>
+			<a href="https://edenthecoder.github.io/MyProjects.html" class="topBar">
+				Projects
+			</a>
+		</div>
+		<hr class="devidor" />
+		<h1 class="largeText">Edens Command Maker v2</h1>
+		<hr class="devidor" />
+
+		<h2 class="normalText">Command:</h2>
+		<h3 class="smalltext" style="color: brown">
+			Dont Use This '
+			<br />
+			Use This instaed "
+		</h3>
+		<input type="number" class="cord" id="cordX" placeholder="X" value="1">
+		<input type="number" class="cord" id="cordY" placeholder="Y" value="1">
+		<input type="number" class="cord" id="cordZ" placeholder="Z" value="1"> <br>
+		<hr class="small-devidor">
+		<textarea
+			placeholder="Say Hello World"
+			name="Command_area"
+			id="Command"
+			class="smalltext"
+			style="color: black; text-align: left"></textarea>
+		<hr class="small-devidor" />
+
+		<div id="Buttons">
+			<select name="command Block Type" id="cBlockType" class="normalText" style="color: black;">
+				<option value="command_block" class="normalText" style="color: black;">Impolse</option>
+				<option value="repeating_command_block" class="normalText" style="color: black;">reapeting</option>
+				<option value="chain_command_block" class="normalText" style="color: black;">chain</option>
+			</select>
+			<br />
+			<hr class="small-devidor" />
+			<input type="checkbox" value="auto" id="auto" />
+			<label for="auto">auto</label>
+			<br />
+			<input type="checkbox" value="conditinal" id="cond" />
+			<label for="cond">conditinal</label>
+			<br />
+			<hr class="small-devidor">
+			<div style="text-align: center;">
+				<h3 class="normalText">direction:</h3>
+				<select name="Command Block direction" id="CblockDir" class="normalText" style="border-color: rgba(240, 248, 255, 0);background-color: rgb(30, 30, 30);">
+					<option value="up">up</option>
+					<option value="down">down</option>
+					<option value="north">north</option>
+					<option value="south">south</option>
+					<option value="east">east</option>
+					<option value="west">west</option>
+				</select>
+			
+		</div>
+		<hr class="devidor" />
+			<button onclick="AddcomandBlock()">Add Command Block</button>
+			<br />
+			<div style="height: 50px"></div>
+			<input
+				type="text"
+				value="redstone_block"
+				class="smalltext"
+				style="color: black; text-align: left"
+				id="Block" />
+			<br />
+			<button onclick="AddnormalBlock()">Add Normal Block</button>
+			<br />
+			<div style="height: 50px"></div>
+			<button onclick="GenCommand()">Gen Command</button>
+		
+		<p id="output"></p>
+		<script src="index.js"></script>
+	</body>
+</html>

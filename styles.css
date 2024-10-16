@@ -1,0 +1,113 @@
+body {
+    background-color: #131313 ;
+    text-align: center;
+    
+}
+
+a{
+    text-decoration: none;
+}
+/* elements*/
+button{
+    
+    margin: 5px 5px;
+    padding: 10px 100px;
+    transition: 200ms ease-in-out;
+    
+    border: 2px solid rgb(255, 0, 242);
+    border-radius: 10px;
+    background: #ffffff00;
+    color: rgb(255, 0, 242);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: normal; 
+}
+button:hover{
+    transform: scale(0.95);
+    transition: 200ms ease-in-out;
+    color: rgb(255, 134, 249);
+    border-color: rgb(75, 40, 202);
+    z-index: 1;
+}
+button:active{
+    transform: scale(0.9);
+    transition: 100ms;
+
+}
+.topBar{
+    color: rgb(255, 255, 255);
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: normal; 
+    text-align: center;
+    text-decoration: none;
+    margin: 2%;
+}
+
+
+/* text sizes */
+.largeText{
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.normalPlusText{
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    font-size: 45px;
+    font-weight: normal;
+}
+.normalText {
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: normal;
+}
+.smalltext , label{
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: normal;
+}
+.smallertext{
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: normal;
+}
+.small-devidor{
+    width: 40%;
+    border: solid rgba(128, 128, 128, 0.438) 2px;
+    border-radius: 30px;
+}
+.devidor{
+    border-image: linear-gradient(to left,blue,red)1 ;
+    border-width: 3px;
+}
+.cord{
+    margin: 5px;
+    text-align: center;
+    width: 30px;
+}
+
+input{
+    scale: 1.1;
+
+}
+
+#output{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: auto;
+    color: white;
+    padding: 50px;
+    border-radius: 10px;
+    border: solid;
+}
