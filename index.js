@@ -58,7 +58,7 @@ function AddcomandBlock() {
 	temp.auto = auto.checked;
 	temp.cond = cond.checked;
 	temp.BlockType = commandType.value;
-	temp.command = command.value;
+	temp.command = command.value.replaceAll('"', '\\"');
 	temp.LocX = cordX.value;
 	temp.LocY = cordY.value;
 	temp.LocZ = cordZ.value;
