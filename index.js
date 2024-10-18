@@ -58,7 +58,9 @@ function AddcomandBlock() {
 	temp.auto = auto.checked;
 	temp.cond = cond.checked;
 	temp.BlockType = commandType.value;
-	temp.command = command.value.replaceAll('"', '\\"');
+	temp.command = command.value
+		.replaceAll("\\", "\\\\\\\\")
+		.replaceAll('"', '\\\\\\"');
 	temp.LocX = cordX.value;
 	temp.LocY = cordY.value;
 	temp.LocZ = cordZ.value;
@@ -68,12 +70,12 @@ function AddcomandBlock() {
 function GenCommand() {
 	daCarts = [];
 	let Fullcommand =
-		'/summon minecraft:falling_block ~ ~ ~ {BlockState:{Name:"activator_rail"},Passengers:[]}';
+		'/summon minecraft:falling_block ~ ~ ~ {BlockState:{Name:"activator_rail"},Passengers:[]}'; //open 1 close 1
 	let charpos = 86;
 	for (let itaration = 0; itaration < Everyblock.length; itaration++) {
 		let i = Everyblock[itaration];
 		let cart =
-			"{id:'minecraft:command_block_minecart',Command:'setblock ~" +
+			'{id:"minecraft:command_block_minecart",Command:"setblock ~' + //open 2 close 1
 			i.LocX +
 			" ~" +
 			i.LocY +
@@ -84,7 +86,7 @@ function GenCommand() {
 		//setblock ~1 ~2 ~-3 minecraft:command_block
 		if (i.iscommandblock) {
 			cart = cart + "[facing=" + i.oriantation + ",conditional=" + i.cond + "]"; //[facing=up,conditional=false]
-			cart = cart + "{Command:'" + i.command + "',auto:" + i.auto + "}"; //{Command:"say Hello",auto:true}
+			cart = cart + '{Command:\\"' + i.command + '\\",auto:' + i.auto + "}"; //{Command:"say Hello",auto:true}
 		}
 
 		cart = cart + '"}';
